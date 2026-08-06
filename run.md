@@ -1,3 +1,3 @@
-to run this :
+to run this in cmd:
 
 python flow.py target.py
