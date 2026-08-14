@@ -1,7 +1,9 @@
-arr = [5, 3, 8, 1, 9]
-n = len(arr)
-for i in range(n):
-    for j in range(0, n - i - 1):
-        if arr[j] > arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
-print(arr)
+class Solution(object):
+    def containsNearbyDuplicate(self, nums, k):
+        seen ={}
+        for i , num in enumerate(nums):
+            if num in seen and i -seen[num]<= k :
+                return True
+            seen[num]= i
+        return False
+              
